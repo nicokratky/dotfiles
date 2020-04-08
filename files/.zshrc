@@ -61,7 +61,3 @@ export LC_ALL="en_US.UTF-8"
 
 alias c="clear"
 alias claer="clear"
-
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-    exec tmux
-fi
