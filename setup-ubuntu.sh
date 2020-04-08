@@ -10,15 +10,14 @@ sudo apt upgrade
 
 PACKAGE_LIST=ubuntu-package-list.txt
 
-sudo apt install zsh git curl neovim tmux
-cat $PACKAGE_LIST | xargs sudo apt install
+cat $PACKAGE_LIST | xargs sudo apt install -y
 
 [[ ! -d $HOME/.config/base16-shell ]] && git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell || true
 
 [[ ! -d $HOME/.oh-my-zsh ]] && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || true
 
 ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
-[[ !-d $ZSH_CUSTOM/themes/spaceship-prompt ]] && git clone https://github.com/denysdovhan/spaceship-prompt.git $ZSH_CUSTOM/themes/spaceship-prompt || true
+[[ ! -d $ZSH_CUSTOM/themes/spaceship-prompt ]] && git clone https://github.com/denysdovhan/spaceship-prompt.git $ZSH_CUSTOM/themes/spaceship-prompt || true
 ln -sf $ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme $ZSH_CUSTOM/themes/spaceship.zsh-theme
 
 ZSH_PATH=$(which zsh)
