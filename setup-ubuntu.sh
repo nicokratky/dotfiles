@@ -29,7 +29,7 @@ if [ $SHELL != $ZSH_PATH ]; then
     sudo chsh -s $ZSH_PATH $(whoami)
 fi
 
-cp -va files/.{zshrc,tmux.conf} $HOME/
+cp -va files/.{zshrc,gitconfig,tmux.conf} $HOME/
 
 mkdir -p $HOME/.config/nvim
 cp -va files/init.vim $HOME/.config/nvim/
