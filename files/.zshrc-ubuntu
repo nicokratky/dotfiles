@@ -1,0 +1,5 @@
+update_platform() {
+    __update_log 'system packages'
+    sudo apt-get update -y
+    sudo apt-get upgrade -y
+}
