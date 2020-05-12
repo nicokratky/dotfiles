@@ -51,4 +51,7 @@ source $HOME/.zshrc-platform
 update() {
     __update_log 'platform'
     update_platform
+
+    __update_log 'oh-my-zsh'
+    upgrade_oh_my_zsh
 }
