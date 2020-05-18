@@ -28,9 +28,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export EDITOR="vim"
-export GIT_EDITOR="vim"
-
 export LANG="en_US.UTF-8"
 export LC_ALL=$LANG
 
@@ -41,6 +38,7 @@ export GPG_TTY=$(tty)
 
 alias c="clear"
 alias claer="clear"
+alias vim="nvim"
 
 __update_log() {
     printf "\n 📦 \e[92mUpdating $1\e[0m\n"
