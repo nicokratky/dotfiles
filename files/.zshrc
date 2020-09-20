@@ -51,5 +51,5 @@ update() {
     update_platform
 
     __update_log 'oh-my-zsh'
-    upgrade_oh_my_zsh
+    omz update
 }
