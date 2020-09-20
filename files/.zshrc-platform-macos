@@ -15,10 +15,10 @@ update_platform() {
     __update_log 'brew'
     brew update
     brew upgrade
-    brew cleanup --prune=0 -s
+    brew cleanup --prune 0 -s
     brew cask outdated | xargs brew cask reinstall
     brew cask cleanup
-    brew cleanup --prune=0 -s
+    brew cleanup --prune 0 -s
     rm -rf $(brew --cache)"
 }
 
