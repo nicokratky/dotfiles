@@ -9,7 +9,7 @@ set -u
 [[ ! -d $HOME/.nvm ]] && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash || true
 
 source $HOME/.nvm/nvm.sh
-nvm install node
+nvm install --lts
 
 [[ ! -d $HOME/.oh-my-zsh ]] && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || true
 
