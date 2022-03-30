@@ -5,6 +5,8 @@ set -e
 # treat unset variables as errors when subtituting
 set -u
 
+xcode-select --install || true
+
 if ! which brew > /dev/null; then
     # install brew
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -20,8 +22,6 @@ cat $PACKAGE_LIST | xargs brew install
 cat $PACKAGE_LIST_GRAPHICAL | xargs brew install --cask
 
 brew cleanup -s --prune=all
-
-xcode-select --install || true
 
 # Don't write .DS_Store files to network drives and external storage media
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
