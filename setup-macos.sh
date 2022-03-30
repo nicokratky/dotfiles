@@ -13,14 +13,13 @@ fi
 brew update
 brew upgrade
 
-
 PACKAGE_LIST=macos-package-list.txt
 PACKAGE_LIST_GRAPHICAL=macos-package-list-graphicsl.txt
 
 cat $PACKAGE_LIST | xargs brew install
-cat $PACKAGE_LIST_GRAPHICAL | xargs brew cask install
+cat $PACKAGE_LIST_GRAPHICAL | xargs brew install --cask
 
-brew cleanup -s --prune=0
+brew cleanup -s --prune=all
 
 xcode-select --install || true
 
