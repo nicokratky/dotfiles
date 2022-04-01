@@ -13,12 +13,8 @@ update_platform() {
     sudo softwareupdate -i -a || exit
 
     __update_log 'brew'
-    brew update
+    brew update -v
     brew upgrade
-    brew cleanup --prune 0 -s
-    brew cask outdated | xargs brew cask reinstall
-    brew cask cleanup
-    brew cleanup --prune 0 -s
-    rm -rf $(brew --cache)"
+    brew cleanup -s --prune=all
 }
 
