@@ -6,6 +6,7 @@ set -e
 set -u
 
 [[ ! -d $HOME/.config/base16-shell ]] && git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell || true
+
 [[ ! -d $HOME/.nvm ]] && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash || true
 
 source $HOME/.nvm/nvm.sh
@@ -13,9 +14,6 @@ nvm install --lts
 
 [[ ! -d $HOME/.oh-my-zsh ]] && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || true
 
-ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
-[[ ! -d $ZSH_CUSTOM/themes/spaceship-prompt ]] && git clone https://github.com/denysdovhan/spaceship-prompt.git $ZSH_CUSTOM/themes/spaceship-prompt || true
-ln -sf $ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme $ZSH_CUSTOM/themes/spaceship.zsh-theme
 
 ZSH_PATH=$(which zsh)
 if ! grep $ZSH_PATH /etc/shells; then
