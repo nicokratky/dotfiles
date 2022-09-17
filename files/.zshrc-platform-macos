@@ -1,6 +1,5 @@
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-alias cduni="cd /Users/nicokratky/Library/Mobile\ Documents/com\~apple\~CloudDocs/Uni"
 alias youtube-dl-mp4='youtube-dl -o "%(title)s.%(ext)s" -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best"'
 alias youtube-dl-mp3='youtube-dl -o "%(title)s.%(ext)s" -x --audio-format mp3 --audio-quality 320K'
 
