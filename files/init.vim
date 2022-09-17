@@ -23,7 +23,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'sheerun/vim-polyglot'
 Plug 'chriskempson/base16-vim'
-Plug 'majutsushi/tagbar'
+Plug 'lervag/vimtex'
+Plug 'KeitaNakamura/tex-conceal.vim'
 
 call plug#end()
 
@@ -45,6 +46,8 @@ set softtabstop=4
 set expandtab
 set shiftwidth=4
 set autoindent
+
+autocmd FileType make set noexpandtab tabstop=8 softtabstop=8
 
 " Searching
 set hlsearch
@@ -71,6 +74,8 @@ map k gkzz
 
 syntax on
 set ruler
+
+filetype plugin indent on
 
 :set number relativenumber " hybrid line numbers
 
@@ -103,4 +108,9 @@ set splitright
 
 map <silent> <C-n> :NERDTreeToggle<CR>
 
-nmap <F8> :TagbarToggle<CR>
+let g:tex_flavor='latex'
+let g:vimtex_quickfix_mode=0
+
+set conceallevel=1
+let g:tex_conceal='abdmg'
+hi Conceal ctermbg=none
