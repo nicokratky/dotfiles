@@ -13,24 +13,35 @@ if !filereadable(vimplug_exists)
     autocmd VimEnter * PlugInstall
 endif
 
-call plug#begin('~/.local/share/nvim/plugged')
+call plug#begin()
 
-Plug 'preservim/nerdtree'
-Plug 'ryanoasis/vim-devicons'
-Plug 'tpope/vim-commentary' " comment stuff out
-Plug 'tpope/vim-fugitive' " git commands
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'sheerun/vim-polyglot'
-Plug 'chriskempson/base16-vim'
+" git
+Plug 'airblade/vim-gitgutter'   " git diff markers
+Plug 'tpope/vim-fugitive'       " git commands
+
+" visual
+Plug 'chriskempson/base16-vim'  " base 16 colors
+Plug 'itchyny/lightline.vim'    " statusbar
+Plug 'junegunn/goyo.vim'        " distraction-free writing
+Plug 'ryanoasis/vim-devicons'   " add icons
+
+" languages
 Plug 'lervag/vimtex'
-Plug 'KeitaNakamura/tex-conceal.vim'
+Plug 'sheerun/vim-polyglot'
+
+" misc
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'preservim/nerdtree'
+Plug 'tpope/vim-commentary' " comment stuff out
 
 call plug#end()
 
 "******************
 " Basic
 "******************
+
+let mapleader=","
 
 " Encoding
 set encoding=utf-8
@@ -43,8 +54,8 @@ set backspace=indent,eol,start
 " Tabs
 set tabstop=4 
 set softtabstop=4
-set expandtab
 set shiftwidth=4
+set expandtab
 set autoindent
 
 autocmd FileType make set noexpandtab tabstop=8 softtabstop=8
@@ -56,35 +67,29 @@ set ignorecase
 set smartcase
 
 set wrap            " turn on line wrappeing
-set wrapmargin=8    " wrap lines when coming within n characters from side
 set linebreak       " set soft wrapping
-set showbreak=…     " show ellipsis at breaking
+set showbreak=      " show ellipsis at breaking
 set nolist
 set textwidth=0
 set wrapmargin=0
 
 " sane line jumping
 " keep cursor always centered
-map j gjzz
-map k gkzz
+map j gj
+map k gk
+
+nmap ; :Buffers<CR>
+nmap <Leader>f :Files<CR>
 
 "******************
 " Visual Settings
 "******************
 
 syntax on
-set ruler
 
 filetype plugin indent on
 
 :set number relativenumber " hybrid line numbers
-
-" automatically toggle between absolute and hybrid line numbers
-:augroup numbertoggle
-:  autocmd!
-:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-:augroup END
 
 let base16colorspace=256
 colorscheme base16-default-dark
@@ -108,9 +113,8 @@ set splitright
 
 map <silent> <C-n> :NERDTreeToggle<CR>
 
+let NERDTreeShowHidden=1 " show hidden files by default
+
 let g:tex_flavor='latex'
 let g:vimtex_quickfix_mode=0
-
-set conceallevel=1
-let g:tex_conceal='abdmg'
-hi Conceal ctermbg=none
+let g:vimtex_view_method='skim'

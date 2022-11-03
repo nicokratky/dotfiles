@@ -1,6 +1,0 @@
-[user]
-    name = Nico Kratky
-    email = nico@nicokratky.me
-    signingKey = 1C56B45BC3C05E1F
-[commit]
-    gpgsign = true

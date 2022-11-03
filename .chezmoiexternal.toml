@@ -1,0 +1,22 @@
+[".oh-my-zsh"]
+    type = "archive"
+    url = "https://github.com/ohmyzsh/ohmyzsh/archive/master.tar.gz"
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "168h"
+[".oh-my-zsh/custom/plugins/zsh-syntax-highlighting"]
+    type = "archive"
+    url = "https://github.com/zsh-users/zsh-syntax-highlighting/archive/master.tar.gz"
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "168h"
+[".config/base16-shell"]
+    type = "archive"
+    url = "https://github.com/chriskempson/base16-shell/archive/master.tar.gz"
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "168h"
+[".local/bin/exa-wrapper.sh"]
+    type = "file"
+    url = "https://gist.githubusercontent.com/eggbean/74db77c4f6404dd1f975bd6f048b86f8/raw/2ab03424665cecf219cc2b28f56b8e5991ecef43/exa-wrapper.sh"
+    executable = true

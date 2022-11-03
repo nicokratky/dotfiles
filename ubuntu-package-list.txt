@@ -1,8 +1,0 @@
-build-essential
-curl
-git
-neovim
-nodejs
-python
-tmux
-zsh

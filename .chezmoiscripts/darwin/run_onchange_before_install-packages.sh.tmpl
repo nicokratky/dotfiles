@@ -1,0 +1,85 @@
+{{- if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+set -eufo pipefail
+
+if ! command -v brew >/dev/null; then
+    echo '🍺  Installing Homebrew'
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+{{ $brews := list
+    "bat"
+    "cloc"
+    "cmake"
+    "coreutils"
+    "exa"
+    "ffmpeg"
+    "fzf"
+    "gcc"
+    "gh"
+    "git"
+    "git-lfs"
+    "gnupg"
+    "grep"
+    "htop"
+    "imagemagick"
+    "jq"
+    "make"
+    "neovim"
+    "openjdk"
+    "ssh-copy-id"
+    "tmux"
+    "unzip"
+    "wget"
+    "yt-dlp"
+    "zsh"
+-}}
+
+{{ $casks := list
+    "1password"
+    "1password-cli"
+    "adobe-creative-cloud"
+    "appcleaner"
+    "discord"
+    "docker"
+    "dropbox"
+    "eloston-chromium"
+    "firefox"
+    "font-hack"
+    "font-hack-nerd-font"
+    "grandperspective"
+    "iterm2"
+    "jetbrains-toolbox"
+    "karabiner-elements"
+    "keepingyouawake"
+    "mactex-no-gui"
+    "mattermost"
+    "nextcloud"
+    "reaper"
+    "rectangle"
+    "spotify"
+    "visual-studio-code"
+    "vlc"
+    "whatsapp"
+-}}
+
+{{ if .personal -}}
+{{ $brews = concat $brews (list
+
+) -}}
+
+{{ $casks = concat $casks (list
+
+) -}}
+{{ end -}}
+
+brew bundle --no-lock --file=/dev/stdin <<EOF
+{{ range ($brews | sortAlpha | uniq) -}}
+brew "{{ . }}"
+{{ end -}}
+{{ range ($casks | sortAlpha | uniq) -}}
+cask "{{ . }}"
+{{ end -}}
+EOF
+{{ end -}}
