@@ -100,7 +100,4 @@ update() {
     brew cleanup --prune=all -s
     rm -rf $(brew --cache)
     {{ end -}}
-
-    __update_log 'oh-my-zsh'
-    omz update
 }
