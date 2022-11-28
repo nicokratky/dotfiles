@@ -3,9 +3,7 @@
 [user]
 	name = Nico Kratky
 	email = nico@nicokratky.me
-{{ if eq .chezmoi.os "darwin" }}
-    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM+pic4jlrDwXIUg5xNM+kcB/qT44D23Fyr40FqpNEEw
-{{ end -}}
+    signingkey = B7CC3C8000053FFF
 [commit]
     gpgsign = true
 [filter "lfs"]
@@ -15,10 +13,3 @@
 	smudge = git-lfs smudge -- %f
 [init]
     defaultBranch = main
-{{ if eq .chezmoi.os "darwin" }}
-[gpg]
-  format = ssh
-[gpg "ssh"]
-  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
-{{ end -}}
-
