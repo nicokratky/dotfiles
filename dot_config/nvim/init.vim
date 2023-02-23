@@ -36,6 +36,7 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-commentary' " comment stuff out
+Plug 'vimwiki/vimwiki'
 
 call plug#end()
 
@@ -120,4 +121,6 @@ let NERDTreeShowHidden=1 " show hidden files by default
 let g:tex_flavor='latex'
 let g:vimtex_quickfix_mode=0
 let g:vimtex_view_method='skim'
+
+let g:vimwiki_list = [{'path': '~/Nextcloud/documents/vimwiki/'}]
 
