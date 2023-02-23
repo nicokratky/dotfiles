@@ -80,8 +80,8 @@ set wrapmargin=0
 map j gj
 map k gk
 
-nmap ; :Buffers<CR>
-nmap <Leader>f :Files<CR>
+nnoremap ; :Buffers<CR>
+nnoremap <Leader>f :Files<CR>
 
 "******************
 " Visual Settings
