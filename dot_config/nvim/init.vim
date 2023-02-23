@@ -31,6 +31,7 @@ Plug 'lervag/vimtex'
 Plug 'sheerun/vim-polyglot'
 
 " misc
+Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
