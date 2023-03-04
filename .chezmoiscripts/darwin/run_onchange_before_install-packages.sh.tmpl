@@ -1,4 +1,4 @@
-{{- if eq .chezmoi.os "darwin" -}}
+{{ if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
 
 set -eufo pipefail
@@ -34,7 +34,17 @@ fi
     "wget"
     "yt-dlp"
     "zsh"
--}}
+}}
+
+{{ if .work }}
+{{ $brews = concat $brews (list
+    "awscli"
+    "awsume"
+    "k9s"
+    "kubectl"
+    "terraform"
+) }}
+{{ end }}
 
 {{ $casks := list
     "1password"
@@ -54,13 +64,9 @@ fi
     "spotify"
     "visual-studio-code"
     "vlc"
--}}
+}}
 
-{{ if .personal -}}
-{{ $brews = concat $brews (list
-
-) -}}
-
+{{ if not .work }}
 {{ $casks = concat $casks (list
     "adobe-creative-cloud"
     "dropbox"
@@ -70,16 +76,8 @@ fi
     "nextcloud"
     "reaper"
     "whatsapp"
-) -}}
-{{ end -}}
-
-{{ if .work -}}
-{{ $brews = concat $brews (list
-    "awscli"
-    "awsume"
-    "terraform"
-) -}}
-{{ end -}}
+) }}
+{{ end }}
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
 {{ range ($brews | sortAlpha | uniq) -}}
