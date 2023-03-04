@@ -1,8 +1,8 @@
 # vim: ft=toml
 
 [user]
-	name = Nico Kratky
-	email = nico@nicokratky.me
+    name = Nico Kratky
+    email = {{ .email }}
     signingkey = B7CC3C8000053FFF
 [commit]
     gpgsign = true
@@ -12,9 +12,9 @@
 [format]
     signoff = true
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	process = git-lfs filter-process
-	required = true
-	smudge = git-lfs smudge -- %f
+    clean = git-lfs clean -- %f
+    process = git-lfs filter-process
+    required = true
+    smudge = git-lfs smudge -- %f
 [init]
     defaultBranch = main
