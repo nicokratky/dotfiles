@@ -74,6 +74,14 @@ fi
 ) -}}
 {{ end -}}
 
+{{ if .work -}}
+{{ $brews = concat $brews (list
+    "awscli"
+    "awsume"
+    "terraform"
+) -}}
+{{ end -}}
+
 brew bundle --no-lock --file=/dev/stdin <<EOF
 {{ range ($brews | sortAlpha | uniq) -}}
 brew "{{ . }}"
