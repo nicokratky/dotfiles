@@ -22,12 +22,20 @@ plugins=(
     git
     git-extras
     sudo
-
+{{- if .work }}
+    terraform
+{{ end }}
     # must be last
     zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
+
+{{ if .work }}
+PROMPT+='$(tf_prompt_info) '
+ZSH_THEME_TF_PROMPT_PREFIX="%{$fg[magenta]%}"
+ZSH_THEME_TF_PROMPT_SUFFIX="%{$reset_color%}"
+{{ end -}}
 
 export HISTCONTROL=ignoreboth
 export HISTSIZE=10000
@@ -61,10 +69,10 @@ alias c="clear"
 alias claer="clear"
 alias vim="nvim"
 
-alias gc="git commit --verbose --signoff"
-
 alias sudo="sudo "
 alias weather="curl wttr.in"
+
+alias find_git_changes="find . -type d -iname '.git' -exec sh -c 'cd \${0}/../ && (git status | grep -q \"is ahead of\" || test -n \"\`git status -s\`\") && pwd' '{}' \;"
 
 alias cat="bat"
 
@@ -78,7 +86,6 @@ fi
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-alias cduni="cd /Users/nicokratky/Library/Mobile\ Documents/com\~apple\~CloudDocs/Uni"
 alias yt-dl-mp3="yt-dlp -o '%(title)s.%(ext)s' -x --audio-format mp3 --audio-quality 320K"
 alias yt-dl-mp4="yt-dlp -o '%(title)s.%(ext)s' -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4"
 
@@ -86,6 +93,13 @@ cdf() {
     cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')";
 }
 
+{{ end -}}
+
+{{ if .work }}
+alias tf="terraform"
+
+alias awsume=". awsume"
+alias combine_dependabot="gh combine-prs --query \"author:app/dependabot\""
 {{ end -}}
 
 __update_log() {
