@@ -1,18 +1,12 @@
 # vim: ft=toml
+{{- $work := false -}}
+{{- $work = promptBool "work" $work -}}
 
-{{/* boolean feature tags */}}
-{{- $personal := false -}}{{/* true if this machine should have personal setup */}}
-{{- $work := false -}}{{/* true if this machine should have work setup */}}
-{{- "" -}}
+{{- $email := "nico@nicokratky.me" -}}
+{{- $email = promptString "email" $email -}}
 
-{{- $personal = promptBool "personal" -}}
-{{- $work = promptBool "work" -}}
+{{ "" }}
 
 [data]
-    personal = {{ $personal }}
     work = {{ $work }}
-{{ if .work }}
-    email = "nkratky@tecracer.at"
-{{ else }}
-    email = "nico@nicokratky.me"
-{{ end }}
+    email = {{ $email | quote }} 
