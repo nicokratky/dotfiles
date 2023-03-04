@@ -1,5 +1,5 @@
-{{ if eq .chezmoi.os "darwin" }}
+{{- if eq .chezmoi.os "darwin" }}
 $pdf_previewer = 'open -a Skim';
-{{ end }}
+{{ end -}}
 $pdf_mode = 1;
 $clean_ext = 'synctex.gz synctex.gz(busy)';

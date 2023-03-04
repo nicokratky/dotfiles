@@ -22,7 +22,8 @@ plugins=(
     git
     git-extras
     sudo
-{{- if .work }}
+{{ if .work }}
+    kubernetes
     terraform
 {{ end }}
     # must be last
@@ -82,8 +83,7 @@ else
     alias ls='/bin/ls $LS_OPTIONS'
 fi
 
-{{ if eq .chezmoi.os "darwin" }}
-
+{{- if eq .chezmoi.os "darwin" }}
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 alias yt-dl-mp3="yt-dlp -o '%(title)s.%(ext)s' -x --audio-format mp3 --audio-quality 320K"
@@ -92,10 +92,9 @@ alias yt-dl-mp4="yt-dlp -o '%(title)s.%(ext)s' -f 'bestvideo[ext=mp4]+bestaudio[
 cdf() {
     cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')";
 }
-
 {{ end -}}
 
-{{ if .work }}
+{{- if .work }}
 alias tf="terraform"
 
 alias awsume=". awsume"
@@ -107,7 +106,7 @@ __update_log() {
 }
 
 update() {
-    {{ if eq .chezmoi.os "darwin" -}}
+    {{- if eq .chezmoi.os "darwin" }}
     __update_log 'macos'
     
     __update_log 'system packages'
