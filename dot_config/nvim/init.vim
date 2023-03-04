@@ -84,6 +84,8 @@ map k gk
 nnoremap ; :Buffers<CR>
 nnoremap <Leader>f :Files<CR>
 
+map <leader>D :put =strftime('%a %d-%m-%Y')<CR>
+
 "******************
 " Visual Settings
 "******************
