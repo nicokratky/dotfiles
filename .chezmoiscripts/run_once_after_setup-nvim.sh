@@ -2,6 +2,6 @@
 
 echo ">> Setting up Neovim"
 
-nvim --headless +PlugInstall +qa
+nvim --headless +PackerInstall +qa
 
 echo ">> Done setting up Neovim"
