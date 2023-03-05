@@ -108,7 +108,7 @@ __update_log() {
 update() {
     {{- if eq .chezmoi.os "darwin" }}
     __update_log 'macos'
-    
+
     __update_log 'system packages'
     sudo softwareupdate -i -a || exit
 

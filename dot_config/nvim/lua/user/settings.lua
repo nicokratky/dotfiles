@@ -22,7 +22,7 @@ o.breakindent = true
 o.ignorecase = true
 o.smartcase = true
 
--- Better searching 
+-- Better searching
 o.hlsearch = true
 o.incsearch = true
 

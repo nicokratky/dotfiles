@@ -11,7 +11,7 @@ if not status_ok then
 end
 
 return packer.startup({
-  function(use) 
+  function(use)
     use('wbthomason/packer.nvim') -- package manager
     use('nvim-lua/popup.nvim') -- popup API implementation for lua
     use('nvim-lua/plenary.nvim')
@@ -34,7 +34,7 @@ return packer.startup({
       config = function()
         require('Comment').setup()
       end,
-    }) 
+    })
 
     -- colorscheme
     use({
@@ -81,6 +81,7 @@ return packer.startup({
       end,
     })
 
+    use('editorconfig/editorconfig-vim')
     use('tpope/vim-sleuth') -- automatically detect tabstop and shiftwidth
 
     use({
