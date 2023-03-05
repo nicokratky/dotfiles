@@ -18,7 +18,15 @@ return packer.startup({
 
     use('tpope/vim-fugitive') -- git commands in nvim
     use('tpope/vim-rhubarb') -- fugitive-companion to interact with github
-    use({ 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' }}) -- add git info
+
+    -- add git info
+    use({
+      'lewis6991/gitsigns.nvim',
+      requires = { 'nvim-lua/plenary.nvim' },
+      config = function()
+        require('gitsigns').setup()
+      end,
+    })
 
     -- 'gc' to comment visual regions/lines
     use({
