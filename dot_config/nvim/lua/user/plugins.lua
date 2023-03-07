@@ -81,6 +81,14 @@ return packer.startup({
       end,
     })
 
+    use({
+      'phaazon/hop.nvim',
+      branch = 'v2',
+      config = function()
+        require('user.plugins.hop')
+      end,
+    })
+
     use('editorconfig/editorconfig-vim')
     use('tpope/vim-sleuth') -- automatically detect tabstop and shiftwidth
 
