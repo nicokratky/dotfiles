@@ -7,8 +7,7 @@ require('nvim-treesitter.configs').setup({
     disable = { 'python' },
   },
   -- A list of parser names, or "all" (the four listed parsers should always be installed)
-  ensure_installed = { "c","go", "latex", "lua", "vim", "help" },
-  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'latex', 'python', 'tsx', 'typescript', 'help', 'vim'},
+  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'latex', 'python', 'terraform', 'tsx', 'typescript', 'help', 'vim'},
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
