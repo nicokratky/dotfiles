@@ -21,11 +21,10 @@ plugins=(
     docker-compose
     git
     git-extras
+    kubectl
+    nvm
     sudo
-{{ if .work }}
-    kubernetes
     terraform
-{{ end }}
     # must be last
     zsh-syntax-highlighting
 )
