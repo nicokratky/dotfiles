@@ -10,7 +10,5 @@ map('n', '<C-l>', '<C-w>l')
 map('v', '<', '<gv')
 map('v', '>', '>gv')
 
-map('n', '<leader>e', ':Lex 30<CR>')
-
 --map({'n', 'v'}, 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 --map({'n', 'v'}, 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })

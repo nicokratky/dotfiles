@@ -1,6 +1,10 @@
 local g = vim.g
 local o = vim.o
 
+-- Disable netrw
+g.loaded_netrw = 1
+g.loaded_netrwPlugin = 1
+
 o.termguicolors = true
 
 -- Decrease update time

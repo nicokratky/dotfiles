@@ -104,6 +104,16 @@ return packer.startup({
     })
 
     use({
+      'nvim-tree/nvim-tree.lua',
+      requires = {
+        'nvim-tree/nvim-web-devicons',
+      },
+      config = function()
+        require('user.plugins.tree')
+      end
+    })
+
+    use({
       'lewis6991/impatient.nvim',
       config = function()
         require('impatient').enable_profile()
