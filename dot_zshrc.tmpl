@@ -55,7 +55,7 @@ export GPG_TTY=$(tty)
 gpg-connect-agent updatestartuptty /bye >/dev/null
 
 if [ -z "$SSH_CLIENT" ]; then
-    export BASE16_SHELL="$HOME/.config/base16-shell/"
+    export BASE16_SHELL="$HOME/.config/base16-shell"
     [ -n "$PS1" ] && [ -s "$BASE16_SHELL/profile_helper.sh" ] && source "$BASE16_SHELL/profile_helper.sh"
 fi
 
