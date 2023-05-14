@@ -5,8 +5,14 @@
 {{- $email := "nico@nicokratky.me" -}}
 {{- $email = promptString "email" $email -}}
 
+{{- $workemail := "" -}}
+{{ if $work }}
+{{- $workemail = promptString "work email" $workemail -}}
+{{ end }}
+
 {{ "" }}
 
 [data]
     work = {{ $work }}
     email = {{ $email | quote }}
+    workemail = {{ $workemail | quote }}

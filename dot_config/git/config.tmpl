@@ -18,3 +18,8 @@
     smudge = git-lfs smudge -- %f
 [init]
     defaultBranch = main
+
+{{ if .work -}}
+[includeIf "gitdir:~/work/"]
+    path = ~/.config/git/work
+{{ end }}
