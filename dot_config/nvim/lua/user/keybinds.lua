@@ -10,5 +10,8 @@ map('n', '<C-l>', '<C-w>l')
 map('v', '<', '<gv')
 map('v', '>', '>gv')
 
+map('n', 'j', 'gj')
+map('n', 'k', 'gk')
+
 --map({'n', 'v'}, 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 --map({'n', 'v'}, 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
