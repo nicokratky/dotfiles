@@ -40,6 +40,9 @@ o.writebackup = false
 o.undofile = true
 o.swapfile = false
 
+-- Clipboard
+o.clipboard = "unnamedplus"
+
 -- Map <leader> to ,
 g.mapleader = ','
 g.maplocalleader = ','
