@@ -25,6 +25,7 @@ fi
     "htop"
     "imagemagick"
     "jq"
+    "koekeishiya/formulae/skhd"
     "make"
     "neovim"
     "openjdk"
@@ -50,12 +51,14 @@ fi
     "1password"
     "1password-cli"
     "appcleaner"
+    "alacritty"
     "discord"
     "docker"
     "eloston-chromium"
     "firefox"
     "font-hack"
     "font-hack-nerd-font"
+    "homebrew/cask-versions/firefox-developer-edition"
     "iterm2"
     "karabiner-elements"
     "keepingyouawake"
@@ -69,12 +72,10 @@ fi
 {{ if not .work }}
 {{ $casks = concat $casks (list
     "adobe-creative-cloud"
-    "dropbox"
     "grandperspective"
     "jetbrains-toolbox"
     "mattermost"
     "nextcloud"
-    "reaper"
     "whatsapp"
 ) }}
 {{ end }}
