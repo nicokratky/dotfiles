@@ -1,0 +1,26 @@
+env:
+  TERM: xterm-256color
+
+shell:
+  program: /usr/local/bin/zsh
+  args:
+    - -c
+    - "tmux"
+
+font:
+  normal:
+    family: "Hack Nerd Font Mono"
+    style: "Regular"
+  size: 16
+
+window:
+  padding:
+    x: 20
+    y: 20
+  decorations: "Buttonless"
+  dimensions:
+    columns: 130
+    lines: 40
+
+mouse:
+  hide_when_typing: true
