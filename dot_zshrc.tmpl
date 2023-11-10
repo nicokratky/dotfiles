@@ -74,8 +74,8 @@ alias find_git_changes="find . -type d -iname '.git' -exec sh -c 'cd \${0}/../ &
 
 alias cat="bat"
 
-if command -v exa >/dev/null; then
-    alias ls='exa-wrapper.sh'
+if command -v eza >/dev/null; then
+    alias ls='eza-wrapper.sh'
 else
     alias ls='/bin/ls $LS_OPTIONS'
 fi

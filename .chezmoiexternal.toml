@@ -16,7 +16,7 @@
     exact = true
     stripComponents = 1
     refreshPeriod = "168h"
-[".local/bin/exa-wrapper.sh"]
+[".local/bin/eza-wrapper.sh"]
     type = "file"
-    url = "https://gist.githubusercontent.com/eggbean/74db77c4f6404dd1f975bd6f048b86f8/raw/2ab03424665cecf219cc2b28f56b8e5991ecef43/exa-wrapper.sh"
+    url = "https://gist.githubusercontent.com/eggbean/74db77c4f6404dd1f975bd6f048b86f8/raw/"
     executable = true
