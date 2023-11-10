@@ -86,6 +86,8 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 alias yt-dl-mp3="yt-dlp -o '%(title)s.%(ext)s' -x --audio-format mp3 --audio-quality 320K"
 alias yt-dl-mp4="yt-dlp -o '%(title)s.%(ext)s' -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4"
 
+alias heic-to-jpg="magick mogrify -monitor -format jpg"
+
 cdf() {
     cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')";
 }
