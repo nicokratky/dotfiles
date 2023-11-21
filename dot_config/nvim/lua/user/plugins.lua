@@ -120,6 +120,8 @@ return packer.startup({
       end,
     })
 
+    use('djoshea/vim-autoread')
+
     if packer_bootstrap then
       packer.sync()
     end
