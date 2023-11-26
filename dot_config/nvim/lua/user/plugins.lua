@@ -122,6 +122,13 @@ return packer.startup({
 
     use('djoshea/vim-autoread')
 
+    use({
+      'lervag/vimtex',
+      config = function()
+        require('user.plugins.vimtex')
+      end
+    })
+
     if packer_bootstrap then
       packer.sync()
     end
