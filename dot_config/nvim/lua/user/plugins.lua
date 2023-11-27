@@ -129,6 +129,16 @@ return packer.startup({
       end
     })
 
+    use({
+      "kdheepak/lazygit.nvim",
+      requires = {
+          "nvim-lua/plenary.nvim",
+      },
+      config = function()
+        vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>")
+      end
+    })
+
     if packer_bootstrap then
       packer.sync()
     end
