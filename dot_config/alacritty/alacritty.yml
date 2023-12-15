@@ -26,4 +26,4 @@ mouse:
   hide_when_typing: true
 
 import:
-  - ~/.config/alacritty/themes/themes/base16_default_dark.yaml
+  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
