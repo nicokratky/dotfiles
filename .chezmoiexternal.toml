@@ -22,6 +22,12 @@
     exact = true
     stripComponents = 1
     refreshPeriod = "168h"
+[".tmux/plugins/tpm"]
+    type = "archive"
+    url = "https://github.com/tmux-plugins/tpm/archive/master.tar.gz"
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "168h"
 [".local/bin/eza-wrapper.sh"]
     type = "file"
     url = "https://gist.githubusercontent.com/eggbean/74db77c4f6404dd1f975bd6f048b86f8/raw/"
