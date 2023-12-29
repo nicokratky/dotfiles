@@ -44,5 +44,5 @@ o.swapfile = false
 o.clipboard = "unnamedplus"
 
 -- Map <leader> to ,
-g.mapleader = ','
-g.maplocalleader = ','
+g.mapleader = ","
+g.maplocalleader = ","
