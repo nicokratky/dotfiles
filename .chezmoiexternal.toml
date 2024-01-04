@@ -10,21 +10,9 @@
     exact = true
     stripComponents = 1
     refreshPeriod = "168h"
-[".config/base16-shell"]
-    type = "archive"
-    url = "https://github.com/chriskempson/base16-shell/archive/master.tar.gz"
-    exact = true
-    stripComponents = 1
-    refreshPeriod = "168h"
 [".config/alacritty/catppuccin"]
     type = "archive"
     url = "https://github.com/catppuccin/alacritty/archive/master.tar.gz"
-    exact = true
-    stripComponents = 1
-    refreshPeriod = "168h"
-[".config/alacritty/themes"]
-    type = "archive"
-    url = "https://github.com/alacritty/alacritty-theme/archive/master.tar.gz"
     exact = true
     stripComponents = 1
     refreshPeriod = "168h"
