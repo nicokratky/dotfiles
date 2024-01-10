@@ -7,7 +7,11 @@ return {
 	init = function()
 		vim.g.barbar_auto_setup = false
 	end,
-	opts = {},
+	opts = {
+		sidebar_filetypes = {
+			NvimTree = true,
+		},
+	},
 	version = "^1.0.0",
 	lazy = false,
 	keys = {
