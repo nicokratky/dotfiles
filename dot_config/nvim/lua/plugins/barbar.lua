@@ -15,11 +15,11 @@ return {
 	version = "^1.0.0",
 	lazy = false,
 	keys = {
-		{ "<Tab>", "<cmd>BufferNext<cr>" },
-		{ "<S-Tab>", "<cmd>BufferPrevious<cr>" },
-		{ "<leader><Tab>", "<cmd>BufferPick<cr>" },
+		{ "<Tab>",           "<cmd>BufferNext<cr>" },
+		{ "<S-Tab>",         "<cmd>BufferPrevious<cr>" },
+		{ "<leader><Tab>",   "<cmd>BufferPick<cr>" },
 		{ "<leader><S-Tab>", "<cmd>BufferPickDelete<cr>" },
-		{ "<leader>c", "<cmd>BufferClose<cr>" },
-		{ "<S-t>", "<cmd>tabnew<cr>" },
+		{ "<leader>c",       "<cmd>BufferClose<cr>" },
+		{ "<S-t>",           "<cmd>tabnew<cr>" },
 	},
 }
