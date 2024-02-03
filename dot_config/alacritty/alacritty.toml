@@ -22,8 +22,8 @@ decorations = "Buttonless"
   y = 20
 
   [window.dimensions]
-  columns = 130
-  lines = 40
+  columns = 100
+  lines = 30
 
 [mouse]
 hide_when_typing = true
