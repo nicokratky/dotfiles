@@ -10,6 +10,7 @@ return {
 			ensure_installed = {
 				"gopls",
 				"lua_ls",
+				"marksman",
 				"pyright",
 				"terraformls",
 				"tsserver",
@@ -27,6 +28,7 @@ return {
 
 			lspconfig.gopls.setup({ capabilities = capabilities })
 			lspconfig.lua_ls.setup({ capabilities = capabilities })
+			lspconfig.marksman.setup({ capabilities = capabilities })
 			lspconfig.pyright.setup({ capabilities = capabilities })
 			lspconfig.terraformls.setup({ capabilities = capabilities })
 			lspconfig.tsserver.setup({ capabilities = capabilities })
