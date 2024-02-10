@@ -23,6 +23,8 @@ return {
 			"hrsh7th/cmp-nvim-lsp",
 		},
 		config = function()
+			vim.lsp.set_log_level("off")
+
 			local lspconfig = require("lspconfig")
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
