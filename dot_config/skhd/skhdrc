@@ -1,2 +1,38 @@
-cmd - return : open -a "/Applications/Alacritty.app"
+cmd - return : open -n -a Alacritty
 alt - return : open -a Firefox
+
+# change window focus within space
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - h : yabai -m window --focus west
+alt - l : yabai -m window --focus east
+
+# change focus between external displays (left and right)
+alt - s: yabai -m display --focus west
+alt - g: yabai -m display --focus east
+
+# rotate layout clockwise
+shift + alt - r : yabai -m space --rotate 270
+
+# balance out tree of windows (resize to occupy same area)
+shift + alt - e : yabai -m space --balance
+
+# swap windows
+shift + alt - j : yabai -m window --swap south
+shift + alt - k : yabai -m window --swap north
+shift + alt - h : yabai -m window --swap west
+shift + alt - l : yabai -m window --swap east
+
+# move window and split
+ctrl + alt - j : yabai -m window --warp south
+ctrl + alt - k : yabai -m window --warp north
+ctrl + alt - h : yabai -m window --warp west
+ctrl + alt - l : yabai -m window --warp east
+
+# move window to display left and right
+alt + cmd - left : yabai -m window --display west; yabai -m display --focus west;
+alt + cmd - right : yabai -m window --display east; yabai -m display --focus east;
+
+# move window to prev and next space
+alt + cmd - p : yabai -m window --space prev;
+alt + cmd - n : yabai -m window --space next;
