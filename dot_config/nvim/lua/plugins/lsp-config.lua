@@ -14,6 +14,7 @@ return {
 				"pyright",
 				"terraformls",
 				"tsserver",
+				"typst_lsp",
 			},
 		},
 	},
@@ -34,11 +35,17 @@ return {
 			lspconfig.pyright.setup({ capabilities = capabilities })
 			lspconfig.terraformls.setup({ capabilities = capabilities })
 			lspconfig.tsserver.setup({ capabilities = capabilities })
+			lspconfig.typst_lsp.setup({ capabilities = capabilities })
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
 			vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 		end,
+	},
+	{
+		"kaarmu/typst.vim",
+		ft = "typst",
+		lazy = false,
 	},
 }
