@@ -36,6 +36,7 @@ return {
 			lspconfig.terraformls.setup({ capabilities = capabilities })
 			lspconfig.tsserver.setup({ capabilities = capabilities })
 			lspconfig.typst_lsp.setup({ capabilities = capabilities })
+			lspconfig.yamlls.setup({ capabilities = capabilities })
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
