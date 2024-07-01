@@ -4,7 +4,7 @@ import = [ "~/.config/alacritty/catppuccin/catppuccin-mocha.toml" ]
 TERM = "xterm-256color"
 
 [shell]
-program = "/usr/local/bin/zsh"
+program = "/opt/homebrew/bin/zsh"
 args = [ "-c", "tmux" ]
 
 [font]
