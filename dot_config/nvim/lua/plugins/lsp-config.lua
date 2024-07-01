@@ -14,6 +14,7 @@ return {
 				"pyright",
 				"terraformls",
 				"tsserver",
+				"typos_lsp",
 				"typst_lsp",
 			},
 		},
@@ -36,6 +37,7 @@ return {
 			lspconfig.terraformls.setup({ capabilities = capabilities })
 			lspconfig.tsserver.setup({ capabilities = capabilities })
 			lspconfig.typst_lsp.setup({ capabilities = capabilities })
+			lspconfig.typos_lsp.setup({ capabilities = capabilities })
 			lspconfig.yamlls.setup({ capabilities = capabilities })
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
