@@ -19,7 +19,7 @@ return {
 					null_ls.builtins.formatting.gofmt,
 					null_ls.builtins.formatting.isort,
 					null_ls.builtins.formatting.stylua,
-					null_ls.builtins.formatting.terraform_fmt,
+					null_ls.builtins.formatting.opentofu_fmt,
 					null_ls.builtins.formatting.yamlfmt,
 				},
 			})
