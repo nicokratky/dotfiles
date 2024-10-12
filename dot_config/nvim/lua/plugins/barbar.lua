@@ -13,6 +13,7 @@ return {
 		},
 	},
 	lazy = false,
+	version = "^1.9.0",
 	keys = {
 		{ "<Tab>",           "<cmd>BufferNext<cr>" },
 		{ "<S-Tab>",         "<cmd>BufferPrevious<cr>" },
