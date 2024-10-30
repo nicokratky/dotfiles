@@ -1,9 +1,10 @@
+[general]
 import = [ "~/.config/alacritty/catppuccin/catppuccin-mocha.toml" ]
 
 [env]
 TERM = "xterm-256color"
 
-[shell]
+[terminal.shell]
 program = "/opt/homebrew/bin/zsh"
 args = [ "-c", "tmux" ]
 
