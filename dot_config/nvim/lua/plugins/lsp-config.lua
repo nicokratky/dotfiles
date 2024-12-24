@@ -15,7 +15,7 @@ return {
 				"terraformls",
 				"tsserver",
 				"typos_lsp",
-				"typst_lsp",
+				"tinymist",
 			},
 		},
 	},
@@ -36,7 +36,7 @@ return {
 			lspconfig.pyright.setup({ capabilities = capabilities })
 			lspconfig.terraformls.setup({ capabilities = capabilities })
 			lspconfig.tsserver.setup({ capabilities = capabilities })
-			lspconfig.typst_lsp.setup({ capabilities = capabilities })
+			lspconfig.tinymist.setup({ capabilities = capabilities, offset_encoding = "utf-8" })
 			lspconfig.typos_lsp.setup({ capabilities = capabilities })
 			lspconfig.yamlls.setup({ capabilities = capabilities })
 
